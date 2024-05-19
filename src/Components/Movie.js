@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfo, faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { faInfo, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Movie({
   title = "Movie Title",
