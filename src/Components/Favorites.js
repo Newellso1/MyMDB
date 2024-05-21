@@ -8,6 +8,9 @@ export default function Favourites({
   favourites,
   button,
   handleDeleteFavourite,
+  watchedList,
+  handleWatched,
+  handleDeleteWatched,
 }) {
   return (
     <div
@@ -29,13 +32,23 @@ export default function Favourites({
         }`}
       >
         {favouritesOpen && (
-          <div className="bg-slate-200">
-            <MovieList
-              list={favourites}
-              button={button}
-              handleClick={(movie) => handleDeleteFavourite(movie.imdbID)}
-            />
-          </div>
+          <>
+            <div className="">
+              <p className="text-center mb-4">
+                You have watched {watchedList.length} out of {favourites.length}{" "}
+                of your favorite movies
+              </p>
+              <MovieList
+                list={favourites}
+                button={button}
+                handleClick={(movie) => handleDeleteFavourite(movie.imdbID)}
+                favouritesOpen={favouritesOpen}
+                watchedList={watchedList}
+                handleWatched={handleWatched}
+                handleDeleteWatched={handleDeleteWatched}
+              />
+            </div>
+          </>
         )}
       </div>
     </div>
