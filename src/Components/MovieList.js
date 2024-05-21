@@ -11,7 +11,7 @@ export default function MovieList({
   handleDeleteWatched,
 }) {
   return (
-    <div className="mh-screen overflow-scroll z-30 flex flex-col items-center gap-4 ">
+    <div className="mh-screen overflow-scroll z-30 flex flex-col items-center gap-4 md:flex-wrap md:flex-row md:justify-center">
       {list.map((movie) => (
         <div key={movie.imdbID}>
           <Movie
