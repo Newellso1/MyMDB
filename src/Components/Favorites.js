@@ -34,10 +34,13 @@ export default function Favourites({
         {favouritesOpen && (
           <>
             <div className="">
-              <p className="text-center mb-4">
-                You have watched {watchedList.length} out of {favourites.length}{" "}
-                of your favorite movies
+              <p className="text-center mb-4 px-10">
+                {favourites.length > 0
+                  ? `You have watched ${watchedList.length} out of ${favourites.length}
+                of your favorite movies`
+                  : "Favourite movies to keep track of which ones you have watched"}
               </p>
+
               <MovieList
                 list={favourites}
                 button={button}
