@@ -38,7 +38,7 @@ export default function Favourites({
                 {favourites.length > 0
                   ? `You have watched ${watchedList.length} out of ${favourites.length}
                 of your favorite movies`
-                  : "Favourite movies to keep track of which ones you have watched"}
+                  : "Add your favourite movies to keep track of which ones you have watched"}
               </p>
 
               <MovieList
