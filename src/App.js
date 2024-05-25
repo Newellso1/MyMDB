@@ -38,6 +38,8 @@ function App() {
     setFavourites((prevFavourites) =>
       prevFavourites.filter((movie) => movie.imdbID !== imdbID)
     );
+
+    handleDeleteWatched(imdbID);
   };
 
   const handleWatched = (movie) => {

@@ -9,7 +9,7 @@ export default function Movie({
 }) {
   return (
     <>
-      <div className="group relative  flex flex-col items-center  text-center  w-56 h-80 ">
+      <div className="group relative  flex flex-col items-center  text-center  w-56 h-80 hover:shadow-md hover:shadow-slate-700 transition-all rounded-md">
         <div className="bg-violet-950 bg-opacity-70 text-violet-200 w-full flex justify-between px-2 py-1  rounded-t-md absolute opacity-0 transition-all group-hover:opacity-100 ">
           <div className="">
             <FontAwesomeIcon
