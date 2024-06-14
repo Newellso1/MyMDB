@@ -11,6 +11,7 @@ export default function Favourites({
   watchedList,
   handleWatched,
   handleDeleteWatched,
+  toggleShowInfo,
 }) {
   return (
     <div
@@ -49,6 +50,7 @@ export default function Favourites({
                 watchedList={watchedList}
                 handleWatched={handleWatched}
                 handleDeleteWatched={handleDeleteWatched}
+                toggleShowInfo={toggleShowInfo}
               />
             </div>
           </>

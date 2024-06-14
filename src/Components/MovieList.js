@@ -9,11 +9,12 @@ export default function MovieList({
   watchedList,
   handleWatched,
   handleDeleteWatched,
+  toggleShowInfo,
 }) {
   return (
     <div className="snap-y mh-screen overflow-scroll z-30 flex flex-col items-center gap-4 md:flex-wrap md:flex-row md:justify-center ">
       {list.map((movie) => (
-        <div key={movie.imdbID} className="snap-start">
+        <div key={movie.imdbID} className="movie-list snap-start">
           <Movie
             key={movie.imdbID}
             id={movie.imdbID}
@@ -21,6 +22,7 @@ export default function MovieList({
             url={movie.Poster}
             handleClick={() => handleClick(movie)}
             button={button}
+            toggleShowInfo={toggleShowInfo}
           />
           {favouritesOpen && (
             <Watched

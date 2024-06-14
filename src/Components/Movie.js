@@ -6,6 +6,8 @@ export default function Movie({
   url,
   handleClick,
   button = faPlus,
+  toggleShowInfo,
+  id,
 }) {
   return (
     <>
@@ -15,6 +17,7 @@ export default function Movie({
             <FontAwesomeIcon
               icon={faInfo}
               className="hover:text-violet-100 transition-all "
+              onClick={() => toggleShowInfo(id)}
             />
           </div>
           <div>
